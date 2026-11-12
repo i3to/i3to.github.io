@@ -588,6 +588,29 @@ html[dir="rtl"] .cvs b{text-align:right}
 @media (max-width:820px){html.vh760 .deck{aspect-ratio:16/9;width:min(100%,calc(29svh * 1.78));margin-bottom:16px}}
 @media (max-width:820px){html.vh680 .deck{width:min(100%,calc(21svh * 1.78));margin-bottom:10px}html.vh680 .winfo h3{font-size:clamp(22px,6vw,30px)}html.vh680 .winfo .num{display:none}}
 @media (max-width:820px) and (max-height:650px){.rs-map{height:min(19svh,50vw)!important}}
+
+.flow .cd.intro .cyc{position:relative;align-self:center;width:min(72%,250px);aspect-ratio:1;margin:auto 0;flex:none}
+.cyc svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.cyc .rg{fill:none;stroke:#d9d9d4;stroke-width:1.5;stroke-dasharray:3 5}
+.cyc .dt{transform-box:view-box;transform-origin:100px 100px;animation:cycR 8s cubic-bezier(.65,0,.35,1) infinite}
+.cyc .dt circle{fill:#2556df}
+html[dir="rtl"] .cyc .dt{animation-name:cycL}
+@keyframes cycR{0%,12%{transform:rotate(0)}25%,37%{transform:rotate(90deg)}50%,62%{transform:rotate(180deg)}75%,87%{transform:rotate(270deg)}100%{transform:rotate(360deg)}}
+@keyframes cycL{0%,12%{transform:rotate(0)}25%,37%{transform:rotate(-90deg)}50%,62%{transform:rotate(-180deg)}75%,87%{transform:rotate(-270deg)}100%{transform:rotate(-360deg)}}
+.cyc .nd{fill:#bdbdb8;transform-box:fill-box;transform-origin:center;animation:cycN 8s ease infinite}
+@keyframes cycN{0%,14%{fill:#2556df;transform:scale(1.5)}22%,100%{fill:#bdbdb8;transform:none}}
+.cyc .cl{position:absolute;display:flex;align-items:center;gap:6px;font-size:clamp(14px,1.15vw,17px);font-weight:700;color:#9a9a96;white-space:nowrap;animation:cycT 8s ease infinite}
+.cyc .cl i{font:500 11px/1 ui-monospace,Menlo,monospace;font-style:normal;opacity:.7}
+@keyframes cycT{0%,14%{color:#111}22%,100%{color:#9a9a96}}
+.cyc .c0{top:15%;left:50%;transform:translate(-50%,-160%)}
+.cyc .c2{bottom:15%;left:50%;transform:translate(-50%,160%)}
+.cyc .c1,.cyc .c3{top:50%;transform:translateY(-50%)}
+.cyc .c1{left:85%;margin-left:12px}.cyc .c3{right:85%;margin-right:12px}
+html[dir="rtl"] .cyc .c1{left:auto;margin-left:0;right:85%;margin-right:12px}html[dir="rtl"] .cyc .c3{right:auto;margin-right:0;left:85%;margin-left:12px}
+html[dir="rtl"] .cyc .n1{animation-delay:6s}html[dir="rtl"] .cyc .n3{animation-delay:2s}
+.cyc .n1,.cyc .c1{animation-delay:2s}.cyc .n2,.cyc .c2{animation-delay:4s}.cyc .n3,.cyc .c3{animation-delay:6s}
+html[dir="rtl"] .cyc .n1{animation-delay:6s}html[dir="rtl"] .cyc .n3{animation-delay:2s}
+@media (prefers-reduced-motion:reduce){.cyc *{animation:none!important}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
 /* CV PAGE */
@@ -810,7 +833,7 @@ var XP=[['2025 —',['UX Team Leader','قائد فريق تجربة المستخ
 var CERTS=[['UX/UI Designer, IPA','مصمم UX/UI، معهد الإدارة العامة','2024'],['UX Design Camp, Tuwaiq Academy','معسكر تصميم تجربة المستخدم، أكاديمية طويق','2024'],['Interactive UX Design Camp, Cradis','معسكر تصميم التجربة التفاعلية، Cradis','2024'],['Digital Innovation, IPA','الابتكار الرقمي، معهد الإدارة العامة','2023'],['UI/UX Masterclass, DAPAK','ماستركلاس UI/UX، DAPAK','2022']];
 
 /* render */
-$('fcards').innerHTML='<div class="cd intro"><h3>'+T(['A story before a screen. Evidence before opinion. A team that knows its rhythm.','قصة قبل الشاشة. دليل قبل الرأي. وفريق يعرف إيقاعه.'])+'</h3><small>'+T(['How my team works','هكذا يعمل فريقي'])+'</small></div>'+FLOW.map(function(f){return '<div class="cd"><h3>'+T(f.h)+'</h3><p>'+T(f.p)+'</p><div class="ic">'+f.ic+'</div></div>'}).join('');
+$('fcards').innerHTML='<div class="cd intro"><h3>'+T(['A story before a screen. Evidence before opinion. A team that knows its rhythm.','قصة قبل الشاشة. دليل قبل الرأي. وفريق يعرف إيقاعه.'])+'</h3>'+'<div class="cyc" aria-hidden="true"><svg viewBox="0 0 200 200"><circle class="rg" cx="100" cy="100" r="70"/><g class="dt"><circle cx="100" cy="30" r="7"/></g>'+[[100,30],[170,100],[100,170],[30,100]].map(function(q,i){return '<circle class="nd n'+i+'" cx="'+q[0]+'" cy="'+q[1]+'" r="5"/>'}).join('')+'</svg>'+[['Understand','نفهم'],['Build','نبني'],['Review','نراجع'],['Grow','ننمو']].map(function(t,i){return '<span class="cl c'+i+'"><i class="ltr">0'+(i+1)+'</i>'+T(t)+'</span>'}).join('')+'</div>'+'<small>'+T(['How my team works','هكذا يعمل فريقي'])+'</small></div>'+FLOW.map(function(f){return '<div class="cd"><h3>'+T(f.h)+'</h3><p>'+T(f.p)+'</p><div class="ic">'+f.ic+'</div></div>'}).join('');
 
 
 /* ---------- isometric drawing ---------- */
