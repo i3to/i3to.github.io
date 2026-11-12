@@ -218,7 +218,7 @@ html[dir="rtl"] .hero .vert{transform:translateY(-50%) rotate(-90deg)}
 .rs-l{display:flex;flex-direction:column;gap:clamp(16px,2.6svh,28px);min-width:0}
 .rs-hd .eb{font-size:15px;color:#6b6b67}
 .rs-hd h2{margin:8px 0 0;font-weight:700;font-size:clamp(46px,5.6vw,100px);line-height:1}
-.rs-hd .sub{margin:12px 0 0;font-size:clamp(15px,1.2vw,19px);color:#55554f;font-weight:400;max-width:40ch}
+.rs-hd .sub{margin:12px 0 0;font-size:clamp(15px,1.15vw,18px);line-height:1.6;color:#55554f;font-weight:400;max-width:46ch}.rs-hd .sub b{color:#111;font-weight:700;transition:color .9s}.rs.fin .rs-hd .sub b{color:#fff}
 .rs-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:clamp(12px,2svh,22px)}
 .rs-tabs button{font-size:13px;border:1px solid #cfcfca;border-radius:99px;padding:6px 12px;color:#777;transition:all .3s;display:inline-flex;gap:6px;align-items:center}
 .rs-tabs button i{font:500 11px/1 ui-monospace,Menlo,monospace;font-style:normal;opacity:.6}
@@ -291,7 +291,7 @@ html[dir=rtl] .rs-pane .fl em{transform:scaleX(-1);display:inline-block}
 @media (max-width:860px){
   .rs .st{display:flex;flex-direction:column;justify-content:center;gap:10px;padding:70px 4vw 14px}
   .rs-pg{order:2;max-width:none;width:100%;margin-top:0}
-  .rs-hd h2{font-size:10vw}.rs-hd .sub{font-size:13.5px;margin-top:8px;line-height:1.5}
+  .rs-hd h2{font-size:10vw}.rs-hd .sub{font-size:12.5px;margin-top:8px;line-height:1.5;max-width:none}
   .rs-l{display:contents}
   .rs-tabs{order:2;margin-top:10px}.rs-map{order:3;flex:none;height:min(27svh,62vw);width:auto;aspect-ratio:5/4;align-self:center}
   .rs-pane{order:4;min-height:0;flex:0 0 auto;width:100%;align-self:stretch}.rs-hd,.rs-tabs{width:100%}.rs-pane h3{font-size:24px}.rs-pane .gl{font-size:14.5px;line-height:1.5}.rs-pane .q{font-size:12px;padding:4px 10px}.rs-pane .pg{gap:10px}.rs-pane .out{padding-top:10px}.rs-pane .out p{font-size:13.5px}.rs-hd h2{font-size:9vw}
@@ -614,7 +614,10 @@ html[dir="ltr"] .cyc svg{transform:scaleX(-1)}
 .cyc .n1,.cyc .c1{animation-delay:2s}.cyc .n2,.cyc .c2{animation-delay:4s}.cyc .n3,.cyc .c3{animation-delay:6s}
 
 @media (prefers-reduced-motion:reduce){.cyc *{animation:none!important}}
-@media (max-width:820px) and (max-height:720px){.rs-hd .sub{display:none}}
+@media (max-width:820px){.rs-hd .sub .sd{display:none}}
+@media (min-width:821px) and (max-height:760px){.rs-hd .sub{font-size:14px;line-height:1.5;max-width:56ch;margin-top:8px}}
+@media (max-width:820px) and (max-height:860px){.rs-pane .gl{font-size:14px}.rs-map{height:min(25svh,58vw)}}
+@media (max-width:820px) and (max-height:700px){.rs-hd .sub{display:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
 /* CV PAGE */
@@ -754,7 +757,7 @@ html[lang=ar] .ctl .sg span{direction:rtl;text-align:right}
   <div class="rs-l">
     <div class="rs-hd"><a class="skip skd" href="#work"><span class="en">Skip to work</span><span class="ar">تخطَّ إلى الأعمال</span> <b>↓</b></a><span class="eb"><span class="en">- My method</span><span class="ar">- طريقتي</span></span>
     <h2><span class="en">I ask before I draw.</span><span class="ar">أسأل قبل أن أرسـم.</span></h2>
-    <p class="sub"><span class="en">Five stages and 16 tasks: the template I run with my team on every project.</span><span class="ar">خمس مراحل و16 مهمة: قالب أعتمده مع فريقي في كل مشروع.</span></p></div>
+    <p class="sub"><span class="en"><b>Five stages, 16 tasks.</b><span class="sd"> A flexible framework I lead my team with, adapted to the nature and needs of each project, from understanding the problem to evaluating and improving the experience.</span></span><span class="ar"><b>خمس مراحل، و16 مهمة.</b><span class="sd"> إطار عمل مرن أقود به الفريق، ونكيّفه بحسب طبيعة كل مشروع واحتياجاته، من فهم المشكلة إلى تقييم التجربة وتحسينها.</span></span></p></div>
     <div class="rs-tabs" id="rstabs"></div><div class="rs-pg"><i id="rspg"></i></div>
     <div class="rs-pane" id="rspane" aria-live="polite"></div>
   </div>
