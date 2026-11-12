@@ -291,7 +291,7 @@ html[dir=rtl] .rs-pane .fl em{transform:scaleX(-1);display:inline-block}
 @media (max-width:860px){
   .rs .st{display:flex;flex-direction:column;justify-content:center;gap:10px;padding:70px 4vw 14px}
   .rs-pg{order:2;max-width:none;width:100%;margin-top:0}
-  .rs-hd h2{font-size:10vw}.rs-hd .sub{display:none}
+  .rs-hd h2{font-size:10vw}.rs-hd .sub{font-size:13.5px;margin-top:8px;line-height:1.5}
   .rs-l{display:contents}
   .rs-tabs{order:2;margin-top:10px}.rs-map{order:3;flex:none;height:min(27svh,62vw);width:auto;aspect-ratio:5/4;align-self:center}
   .rs-pane{order:4;min-height:0;flex:0 0 auto;width:100%;align-self:stretch}.rs-hd,.rs-tabs{width:100%}.rs-pane h3{font-size:24px}.rs-pane .gl{font-size:14.5px;line-height:1.5}.rs-pane .q{font-size:12px;padding:4px 10px}.rs-pane .pg{gap:10px}.rs-pane .out{padding-top:10px}.rs-pane .out p{font-size:13.5px}.rs-hd h2{font-size:9vw}
@@ -614,6 +614,7 @@ html[dir="ltr"] .cyc svg{transform:scaleX(-1)}
 .cyc .n1,.cyc .c1{animation-delay:2s}.cyc .n2,.cyc .c2{animation-delay:4s}.cyc .n3,.cyc .c3{animation-delay:6s}
 
 @media (prefers-reduced-motion:reduce){.cyc *{animation:none!important}}
+@media (max-width:820px) and (max-height:720px){.rs-hd .sub{display:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
 /* CV PAGE */
