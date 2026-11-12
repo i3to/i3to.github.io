@@ -1063,7 +1063,7 @@ function rsBuild(){var map=$('rsmap');if(!map)return;
   var lb=[[0,25,6.5,['Stakeholders','أصحاب المصلحة']],[0,75,6.5,['Users','المستخدمون']],[0,25,94,['Competitors','المنافسون']],[0,75,94,['Survey','الاستبيان']],
    [1,50,76,['Clusters the team agreed on','مجموعات اتفق عليها الفريق']],[1,50,97,['Filtered out','استُبعد'],1],
    [2,33,98,['Low effort','جهد أقل'],1],[2,72,98,['High effort','جهد أعلى'],1],[2,9.5,30,['High impact','أثر عالٍ'],1],[2,9.5,72,['Low impact','أثر أقل'],1],[2,33,8,['Build first','نبدأ بها'],0],
-   [3,40,9,['Product','المنتج'],0,2],[3,89,46,['Main sections','أقسام رئيسية'],1,1],[3,89,75,['Sub sections','أقسام فرعية'],1,0],
+   [3,40,9,['Product','المنتج'],0,2],[3,94,43,['Main sections','أقسام رئيسية'],1,1],[3,94,72,['Sub sections','أقسام فرعية'],1,0],
    [4,50,98,['From wireframe to screen','مـن الإطار إلى الشاشـة'],0,null,'big']];
   map.innerHTML=o+lb.map(function(l){return '<span class="rs-lb'+(l[4]?' mu':'')+(l[6]?' '+l[6]:'')+'"'+(l[5]!=null?' data-lv="'+l[5]+'"':'')+' data-s="'+l[0]+'" style="left:'+l[1]+'%;top:'+l[2]+'%">'+T(l[3])+'</span>'}).join('');
   rsDots=[].slice.call(map.querySelectorAll('.d'));rsOv=[].slice.call(map.querySelectorAll('.ov'));rsLb=[].slice.call(map.querySelectorAll('.rs-lb'));
